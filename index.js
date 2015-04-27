@@ -3,25 +3,26 @@
  */
 
 var express     = require('express'),
-    bodyParser  = require('body-parser'),
-    config      = require('./lib/config'),
+    engine      = require('./lib'),
     app         = express();
 
-config.setConfig('jobs.cron.cronTime', '00 48 01 * * *');
-var jobs = require('./lib/jobs');
+app.use('/public', express.static(__dirname + '/public'));
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
+app.get('/', function (request, response) {
+    response.sendFile(__dirname + '/public/index.html');
+});
 
-
-require('./lib/blog')(app);
-
-jobs
-    .startup()
-    .then(function () {
-        app.listen(5000, function () {
-            console.log('The server is running at port:5000');
-        });
+engine
+    .config(function (pConfig) {
+        pConfig.setConfig('jobs.cron.cronTime', '00 48 01 * * *');
+    })
+    .blog(app)
+    .jobs(function (pJobs) {
+        pJobs
+            .startup()
+            .then(function () {
+                app.listen(5000, function () {
+                    console.log('The server is running at port:5000');
+                });
+            });
     });
