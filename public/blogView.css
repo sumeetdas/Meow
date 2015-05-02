@@ -10,6 +10,9 @@ p {
 p a {
   text-decoration: underline;
 }
+blockquote p {
+  margin: 0px 0;
+}
 h1,
 h2,
 h3,
@@ -21,6 +24,7 @@ h6 {
 }
 a {
   color: #404040;
+  cursor: pointer;
 }
 a:hover,
 a:focus {
@@ -345,13 +349,23 @@ form .row:first-child .floating-label-form-group {
   border: 1px solid #0085a1;
   color: white;
 }
-.ui-select-placeholder {
-  margin-top: -10px;
-  margin-left: -10px;
+.form-control {
+  height: 54px;
 }
-.ui-select-match-text {
-  margin-top: -10px;
-  margin-left: -10px;
+.ui-select-match:hover,
+.ui-select-match:focus {
+  color: #ffffff !important;
+}
+.ui-select-choices {
+  max-height: 135px !important;
+  overflow-y: auto !important;
+}
+.ui-select-match-item {
+  padding: 10px 15px !important;
+}
+.nav-block {
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .pager {
   margin: 20px 0 0;

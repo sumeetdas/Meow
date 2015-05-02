@@ -6804,6 +6804,80 @@ body > .ui-select-bootstrap.open {
 .ui-select-bootstrap.ng-dirty.ng-invalid > button.btn.ui-select-match {
     border-color: #D44950;
 }
+.toggle-switch {
+    border: 1px solid;
+    cursor: pointer;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    line-height: 8px;
+    min-width: 100px;
+}
+
+.toggle-switch.disabled > div > span.knob {
+    background: #AAA;
+}
+
+.toggle-switch span {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    line-height: 20px;
+    padding: 4px;
+    text-align: center;
+    width: 33%;
+    white-space: nowrap;
+
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.toggle-switch > div {
+    position: relative;
+    width: 150%;
+}
+
+.toggle-switch .knob {
+    background: red;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #f5f5f5;
+    width: 34%;
+    z-index: 100;
+}
+
+.toggle-switch .switch-on {
+    left: 0%;
+}
+
+.toggle-switch .switch-off {
+    left: -50%
+}
+
+.toggle-switch .switch-left, .toggle-switch .switch-right {
+    z-index: 1;
+}
+
+.toggle-switch .switch-left {
+    color: #fff;
+    background: #005fcc;
+}
+
+.toggle-switch .switch-right {
+    color: #333;
+    background: #f0f0f0;
+}
+
+.toggle-switch-animate {
+    transition: left 0.5s;
+    -o-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+}
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
@@ -6830,6 +6904,7 @@ h6 {
 }
 a {
   color: #404040;
+  cursor: pointer;
 }
 a:hover,
 a:focus {
@@ -7157,17 +7232,16 @@ form .row:first-child .floating-label-form-group {
 .form-control {
   height: 54px;
 }
-.ui-select-match:hover *,
-.ui-select-match:focus * {
+.ui-select-match:hover,
+.ui-select-match:focus {
   color: #ffffff !important;
 }
 .ui-select-choices {
   max-height: 135px !important;
   overflow-y: auto !important;
 }
-.blog-main {
-  height: 100%;
-  overflow-y: auto;
+.ui-select-match-item {
+  padding: 10px 15px !important;
 }
 .nav-block {
   margin-top: 30px;
