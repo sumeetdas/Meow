@@ -27,13 +27,13 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-.idea/*
-
-_posts/*
+.idea
 
 #build folder
-build/*
-fonts/*
-public/*
-_posts - Copy/*
-_uploads/*
+build
+
+fonts
+public
+_posts
+_posts - Copy
+_uploads

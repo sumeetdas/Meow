@@ -6,7 +6,11 @@ var express     = require('express'),
     engine      = require('./lib'),
     app         = express();
 
+global.__base = __dirname + '/';
+
 app.use('/public', express.static(__dirname + '/public'));
+
+app.use('/fonts', express.static(__dirname + '/fonts'));
 
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/public/index.html');
