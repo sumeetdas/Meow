@@ -33,3 +33,7 @@ _posts/*
 
 #build folder
 build/*
+fonts/*
+public/*
+_posts - Copy/*
+_uploads/*
