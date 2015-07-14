@@ -18,7 +18,15 @@ app.get('/', function (request, response) {
 
 engine
     .config(function (pConfig) {
-        pConfig.setConfig('jobs.cron.cronTime', '00 48 01 * * *');
+        pConfig
+            .setConfig('jobs.cron.cronTime', '00 48 01 * * *')
+            .setConfig('username', 'Sumeet Das')
+            .setConfig('disqus.shortname', 'sumeetdas1992')
+            .setConfig('angularSocialShare', {
+                facebook: {
+                    appId: '426706947492936'
+                }
+            });
     })
     .blog(app)
     .jobs(function (pJobs) {
