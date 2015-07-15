@@ -26,6 +26,7 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+<<<<<<< HEAD
 
 .idea
 
@@ -37,3 +38,5 @@ public
 _posts
 _posts - Copy
 _uploads
+=======
+>>>>>>> af3d6f87ddcc7349da70570cac296453e80cf97b

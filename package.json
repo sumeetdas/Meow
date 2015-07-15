@@ -1,8 +1,8 @@
 {
-  "name": "Meow",
+  "name": "meow-blog",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Meow blogging engine",
+  "main": "lib/index.js",
   "directories": {
     "test": "tests"
   },
