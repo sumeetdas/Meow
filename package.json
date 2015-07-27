@@ -1,6 +1,6 @@
 {
   "name": "meow-blog",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Meow blogging engine",
   "main": "lib/index.js",
   "directories": {
