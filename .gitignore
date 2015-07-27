@@ -3,12 +3,13 @@
 #build folder
 build
 
-fonts
+bower_components
 public
 _posts
 _posts - Copy
 _uploads
 node_modules
+./index.js
 
 
 
