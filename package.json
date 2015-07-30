@@ -1,6 +1,6 @@
 {
   "name": "meow-blog",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Meow blogging engine",
   "main": "lib/index.js",
   "directories": {
@@ -32,6 +32,7 @@
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
     "prerender-node": "^1.3.0",
+    "sitemap": "^0.9.0",
     "yamljs": "^0.2.1"
   },
   "devDependencies": {

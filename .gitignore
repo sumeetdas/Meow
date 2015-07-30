@@ -11,5 +11,6 @@ _uploads
 node_modules
 /index.js
 
-
+/sitemap*
+/robots.txt
 
