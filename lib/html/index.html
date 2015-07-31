@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <base href="/"/>
+    <meta name="fragment" content="!">
+    <meta charset="UTF-8">
+    <title ng-bind="metaTags.title">John Doe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta ng-repeat="o in metaTags.og" property="{{o.property}}" content="{{o.content}}" />
+    <meta ng-repeat="tag in metaTags.tags" property="article:tag" content="{{tag}}" />
+    <meta ng-repeat="t in metaTags.twitter" name="{{t.name}}" content="{{t.content}}" />
+    <link rel="stylesheet" href="/bower_components/meow-blogview/dist/css/blogview.combo.min.css"/>
+</head>
+<body>
+    <div ui-view="blogView"></div>
+    <script src="/bower_components/meow-blogview/dist/blogview.combo.min.js"></script>
+    <script src="http://platform.twitter.com/widgets.js"></script>
+    <script>
+        angular.module('app', ['meow.blog.view'])
+                .config(['$urlRouterProvider', function ($urlRouterProvider) {
+                    $urlRouterProvider.otherwise('/blogs');
+                }]);
+    </script>
+</body>
+</html>
