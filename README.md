@@ -1,9 +1,9 @@
 # Meow
 Meow is a NodeJS + AngularJS based blogging engine which is aimed at making blogs using AngularJS as front-end more easy to share and being crawled by various search bots.
 
-This repository contains the code for the NodeJS based blogging engine which also serves as a REST API. To visit its AngularJS based front-end modules, please visit [Meow-BlogView](https://www.github.com) (module for viewing blogs) and [Meow-BlogEdit](http://www.github.com) (module for editing blogs).
+This repository contains the code for the NodeJS based blogging engine which also serves as a REST API. To visit its AngularJS based front-end modules, please visit [Meow-BlogView](https://github.com/sumeetdas/Meow-BlogView) (module for viewing blogs) and [Meow-BlogEdit](https://github.com/sumeetdas/Meow-BlogEdit) (module for editing blogs).
 
-### 1. Installation
+### Installation
 
 To install Meow, execute the following command:
 
@@ -19,7 +19,7 @@ To install both of them, execute the following command:
 bower install meow-blogview meow-blogedit
 ```
 
-### 2. Structure of the blog directory and a typical post
+### Structure of the blog directory and a typical post
 
 Meow requires the blog posts to be present under '_posts' folder and will quite often process this directory. 
 
@@ -47,7 +47,7 @@ The text between <!-- and --> is the metadata region of the blog post and is wri
 comment tags (<!-- and -->) are important and must be at the top of the post file and the text in between them must be written 
 in YAML. Note that other than 'title', other metadata properties are optional.
 
-### 3. Jobs handled by Meow
+### Jobs handled by Meow
 
 1. Creates '_posts' and '_uploads' folder automatically if they do not exist. Meow will NEVER delete them once it finds out that they exist in the directory.
 
@@ -55,7 +55,7 @@ in YAML. Note that other than 'title', other metadata properties are optional.
 
 3. Creates/overwrites sitemap-posts.xml (sitemap containing URLs of all the posts available in _posts directory) and sitemap-tags.xml (sitemap containing URLs of all the tags) everytime the server starts.
 
-4. Meow also serves as a REST API for blogs. More information on REST routes are given below under the heading "Routes".
+4. Meow also serves as a REST API for blogs. More information on REST routes are given below under the heading [Routes](#Routes).
 
 5. Meow will allow a user to enter into the edit mode only if he/she accesses the following url: 
    ```
@@ -80,7 +80,7 @@ in YAML. Note that other than 'title', other metadata properties are optional.
 
 9. It includes prerender-node which can be configured to fetch statically rendered page when google or some other search engine bot crawls your site.
 
-### 4. Routes
+### Routes
 
 1. GET /blogs/edit/login?meow=[MEOW_SECRET_QUERY_PARAM]
   This will fetch the page where the login will be asked to enter correct username and password before he/she could access the edit page
@@ -130,7 +130,7 @@ in YAML. Note that other than 'title', other metadata properties are optional.
 16. GET *
   Servers index.html for all other routes. Added because of the two accompanying AngularJS modules as refreshing page when HTML5 push state is enabled would cause 404.
 
-### 5. Config and setup of Meow engine
+### Config and setup of Meow engine
 
 Available configs: 
 
