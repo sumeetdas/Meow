@@ -55,7 +55,7 @@ in YAML. Note that other than 'title', other metadata properties are optional.
 
 3. Creates/overwrites sitemap-posts.xml (sitemap containing URLs of all the posts available in _posts directory) and sitemap-tags.xml (sitemap containing URLs of all the tags) everytime the server starts.
 
-4. Meow also serves as a REST API for blogs. More information on REST routes are given below under the heading [Routes](#Routes).
+4. Meow also serves as a REST API for blogs. More information on REST routes are given below under the heading [Routes](#routes).
 
 5. Meow will allow a user to enter into the edit mode only if he/she accesses the following url: 
    ```
