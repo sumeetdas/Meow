@@ -3,6 +3,10 @@ Meow is a NodeJS + AngularJS based blogging engine which is aimed at making blog
 
 This repository contains the code for the NodeJS based blogging engine which also serves as a REST API. To visit its AngularJS based front-end modules, please visit [Meow-BlogView](https://github.com/sumeetdas/Meow-BlogView) (module for viewing blogs) and [Meow-BlogEdit](https://github.com/sumeetdas/Meow-BlogEdit) (module for editing blogs).
 
+Demo: http://meow-sample-app.herokuapp.com/blogs
+
+In 'production': http://www.sumeetdas.me/blogs
+
 ### Installation
 
 To install Meow, execute the following command:
@@ -134,7 +138,7 @@ in YAML. Note that other than 'title', other metadata properties are optional.
 
 Available configs: 
 
-```
+```javascript
   {
     log: {
         info: console.log,
@@ -182,7 +186,7 @@ Available configs:
 
 Setup:
 
-```  
+```javascript
   engine
     .config(function (pConfig) {
         pConfig
